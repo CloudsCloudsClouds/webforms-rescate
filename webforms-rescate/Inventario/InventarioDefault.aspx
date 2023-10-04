@@ -5,15 +5,15 @@
         <h1>Inventario
         </h1>
         <div class="row">
-            <asp:GridView ID="GridView1" Class="table-responsive" runat="server" AutoGenerateColumns="False" DataSourceID="InventarioVistaGeneral1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+            <asp:GridView ID="GridView1" Class="table-responsive" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
                 <Columns>
-                    <asp:BoundField DataField="NombreRecurso" HeaderText="NombreRecurso" SortExpression="NombreRecurso" />
-                    <asp:BoundField DataField="IDProveedor" HeaderText="IDProveedor" SortExpression="IDProveedor" />
+                    <asp:BoundField DataField="Nombre Recurso" HeaderText="Nombre Recurso" SortExpression="Nombre Recurso" />
+                    <asp:BoundField DataField="Tipo Recurso" HeaderText="Tipo Recurso" SortExpression="Tipo Recurso" />
+                    <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
                     <asp:BoundField DataField="Costo" HeaderText="Costo" SortExpression="Costo" />
-                    <asp:BoundField DataField="FechaCompra" HeaderText="FechaCompra" SortExpression="FechaCompra" />
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource ID="InventarioVistaGeneral1" runat="server" ConnectionString="<%$ ConnectionStrings:sistema_respuestaConnectionString %>" ProviderName="<%$ ConnectionStrings:sistema_respuestaConnectionString.ProviderName %>" SelectCommand="SELECT [NombreRecurso], [IDProveedor], [Costo], [FechaCompra] FROM [Recursos] ORDER BY [FechaCompra]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:emergenciaConnectionString %>" ProviderName="<%$ ConnectionStrings:emergenciaConnectionString.ProviderName %>" SelectCommand="SELECT R.Nombre AS [Nombre Recurso], TR.Nombre AS [Tipo Recurso], Almacen.Nombre, TR.Costo FROM Recurso AS R INNER JOIN TipoRecurso AS TR ON R.IDTipoRecurso = TR.ID INNER JOIN Almacen ON R.IDAlmacen = Almacen.ID"></asp:SqlDataSource>
             <asp:Button ID="btnInsertData" runat="server" Text="Ingresar datos" OnClick="btnInsertData_Click"/>
         </div>
     </main>
