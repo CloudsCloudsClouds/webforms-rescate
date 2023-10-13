@@ -1,0 +1,63 @@
+﻿
+body {
+    background-color: #007bff; /* Fondo celeste */
+    font-family: Arial, sans-serif;
+    color: #fff; /* Texto blanco */
+}
+
+.container {
+    background-color: rgba(51, 51, 51, 0.9); /* Color de fondo del formulario casi transparente */
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 255, 0.4); /* Sombra azul más grande y transparente */
+    padding: 20px;
+    margin: 50px auto;
+    width: 50%;
+    border: 2px solid #fff; /* Borde blanco */
+}
+
+h3 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff; /* Color del título azul */
+}
+
+label {
+    font-size: 16px;
+    color: #fff; /* Color de las etiquetas blanco */
+    text-align: left; /* Alinea las etiquetas a la izquierda */
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #fff; /* Borde blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo casi transparente */
+    color: #fff; /* Texto blanco */
+    position: relative; /* Necesario para posicionar el botón */
+}
+
+.btn-warning {
+    background-color: #007bff; /* Color de fondo del botón azul */
+    color: #fff; /* Color del texto del botón blanco */
+    border: 2px solid #fff; /* Borde blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 15px 0; /* Ajusta el padding vertical */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Transición suave */
+    position: absolute; /* Posición absoluta */
+    right: 3px; /* Alineado a la derecha con un espacio de 3px */
+    top: 50%; /* Alineado en el centro verticalmente */
+    transform: translateY(-50%); /* Corrige el alineado vertical */
+    height: calc(100% - 6px); /* Misma altura que el cuadro de contraseña */
+    width: 140px; /* Ancho del botón ajustado */
+}
+
+    .btn-warning:hover {
+        background-color: #0056b3; /* Color de fondo del botón al pasar el cursor */
+    }
+
+
